@@ -12,7 +12,7 @@ no_of_clusters = int(input("Please input number of clusters for which readings a
 no_of_sensors = int(input("Please input number of sensors per cluster: "))
 
 '''
-Generate randomised sensor readings for user-defined no of sensors and stores in list called "sensor_readings"
+Generate randomised sensor readings for user-defined no of sensors and store in list called "sensor_readings"
 Then add this list of readings into the 'dataset' list such as to contain a 16-reading list for each cluster
 '''
 for i in range(0,no_of_clusters):
@@ -44,7 +44,7 @@ def diagnosis_function(inputvalue):
                       + " " + str(row[0]) + " failure")
 
     '''
-    Create (if not already existing) and write all the entries in the error list to a txt file called 
+    Create (if not already existing) and write all the entries in the error list to a text file called 
     error_log.txt along with date and time stamp of the diagnosis. 
     Mode 'a' ensures no data is overwritten in the text file
     '''
@@ -61,7 +61,7 @@ def diagnosis_function(inputvalue):
 diag_decision = (input("Would you like to check all recorded data for sensor failures? Enter Y for Yes "
                    "or any other letter for No: "))
 
-#If user inputs 'Y' then call the diagnosis function to check for all sensors in dataset
+#If user inputs 'Y' then call the diagnosis function to check for all failed sensors in dataset
 if diag_decision.lower() in ["y"]:
     diagnosis_function(diag_decision)
 
